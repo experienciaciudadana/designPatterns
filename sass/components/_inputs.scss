@@ -6,6 +6,11 @@ label {
   margin: 8px auto;
 }
 
+.errorMsg {
+    color: $red;
+    margin-top: 8px;
+}
+
 .input-group {
 
   input {
