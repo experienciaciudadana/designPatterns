@@ -1047,58 +1047,97 @@
             <div class="row codeblock">
               <div class="col-sm-12 col-md-6">
                 <h4>HTML</h4>
-  <pre>
-  <code>
-    &lt;div class="top-header"&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="row"&gt;
-          &lt;div class="col-sm-12"&gt;
-            &lt;img src="img/logo.svg" alt="Logo Anses"&gt;
-            &lt;h1 class="title"&gt;| Sistema de Diseño&lt;/h1&gt;
-          &lt;/div&gt;
+<pre>
+<code>
+  &lt;div class="top-header"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-12"&gt;
+          &lt;img src="img/logo.svg" alt="Logo Anses"&gt;
+          &lt;h1 class="title"&gt;| Sistema de Diseño&lt;/h1&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  </code>
-  </pre>
+  &lt;/div&gt;
+</code>
+</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h4>SCSS</h4>
-  <pre>
-  <code>
-    .top-header {
-      background: $blue-60;
-      box-shadow: 0 2px 2px rgba(0,0,0,.2);
+<pre>
+<code>
+  .top-header {
+    background: $blue-60;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+
+    @media (min-width: $screen-xs) {
+      height: 100px;
+    }
+
+    .title {
+      color: $snow;
+      font-weight: lighter;
+      text-align: $center;
+      font-size: 24px;
 
       @media (min-width: $screen-xs) {
-        height: 100px;
-      }
-
-      .title {
-        color: $snow;
-        font-weight: lighter;
-        text-align: $center;
-        font-size: 24px;
-
-        @media (min-width: $screen-xs) {
-          text-align: $left;
-          font-size: 40px;
-        }
-      }
-
-      img {
-        height: 44px;
-        margin: 30px 16px 0 0;
-        width: 100%;
-
-        @media (min-width: $screen-xs) {
-          float: left;
-          width: 170px;
-        }
+        text-align: $left;
+        font-size: 40px;
       }
     }
-  </code>
-  </pre>            </div>
+
+    img {
+      height: 44px;
+      margin: 30px 16px 0 0;
+      width: 100%;
+
+      @media (min-width: $screen-xs) {
+        float: left;
+        width: 170px;
+      }
+    }
+  }
+</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+<!-- Footer -->
+          <div class="component">
+            <h2>Footer</h2>
+              <p>Se recomienda incluir un <i>footer</i> común en todas las aplicaciones y servicios integrados a este sistema. El mismo debe incluir el escudo y la referencia a la presidencia de la Nación. Luego Anses. El año es generado automáticamente por un <i>script</i>.<br><a href="img/escudo.png">Descargar escudo Presidencia de la Nación</a></p>
+              <img src="img/footer-bar.png" alt="Header">
+            <div class="row codeblock">
+              <div class="col-sm-12 col-md-6">
+                <h4>HTML & JS</h4>
+<pre>
+<code>
+  &lt;footer&gt;
+			&lt;img src="../img/escudo.png" align="center" alt="Escudo de la República Argentina"&gt; Presidencia de la Nación | ANSES Copyright &lt;span class="year"&gt;&lt;/span&gt;
+    &lt;script&gt;
+      document.querySelector("span.year").innerHTML = new Date().getFullYear();
+    &lt;/script&gt;
+  &lt;/footer&gt;
+</code>
+</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h4>SCSS</h4>
+<pre>
+<code>
+  footer {
+  	background-color: $gray-40;
+  	padding-bottom: 18px;
+  	width: 100%;
+  	text-align: center;
+  	margin-top: 80px;
+  	display:inline-block;
+    padding: 35px 0 25px;
+  }
+</code>
+</pre>
+              </div>
             </div>
           </div>
 
@@ -1945,10 +1984,10 @@
           <div class="component">
             <h2>Máscaras</h2>
             <p>
-              La máscara de los campos <i>input</i> es un archivo js que permite cualquier configuración de ingreso de números.
+              La máscara de los campos <i>input</i> es un <i>script</i> que permite cualquier configuración de ingreso de números.
             </p>
             <p>
-              Es necesario agregar el evento <i>onkeypress</i> y llamar a la función handleMask declarada en el js con los parámetros <i>event</i> y la la configuración que se quiera agregar realizada con números 9.
+              Es necesario agregar el evento <i>onkeypress</i> y llamar a la función <i>handleMask</i> declarada en el js con los parámetros <i>event</i> y la la configuración que se quiera agregar realizada con números 9.
             </p>
             <p>
               Por ejemplo para incluir la máscara para un número de CUIL se deberá agregar la función <strong>handleMask</strong> y los parámetros <strong>(event, '99-99999999-9')</strong>. Luego agregar el <i>placeholder</i> que refiera a esa configuración.
@@ -2070,6 +2109,16 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <footer>
+   			<img src="../img/escudo.png" align="center" alt="Escudo de la República Argentina"> Presidencia de la Nación | ANSES Copyright <span class="year"></span>
+        <script>
+          document.querySelector("span.year").innerHTML = new Date().getFullYear();
+        </script>
+  </footer>
 
   <!-- Scripts -->
   <script
