@@ -17,102 +17,96 @@
     color: reset;
     outline: none;
     -webkit-outline: none; }
-
-.btn-default {
-  background-color: #005296;
-  box-shadow: 0px 4px 0px 0px #0C1E2B;
-  color: #FFFFFF; }
-  .btn-default:active {
-    background-color: #1786E2;
+  .btn-default {
+    background-color: #005296;
+    box-shadow: 0px 4px 0px 0px #0C1E2B;
     color: #FFFFFF; }
-    .btn-default:active:hover {
+    .btn-default:active {
       background-color: #1786E2;
       color: #FFFFFF; }
-  .btn-default:hover {
-    background-color: #1786E2;
-    color: #FFFFFF; }
-  .btn-default:focus {
-    background-color: #1786E2;
-    color: #FFFFFF; }
-
-.btn-negative {
-  background-color: #FFFFFF;
-  box-shadow: 0px 2px 0px 0px #0C1E2B;
-  border: 2px solid #0C1E2B;
-  color: #0C1E2B;
-  transition: none; }
-  .btn-negative:active {
-    background-color: #F1F1F1; }
-  .btn-negative:hover {
+      .btn-default:active:hover {
+        background-color: #1786E2;
+        color: #FFFFFF; }
+    .btn-default:hover {
+      background-color: #1786E2;
+      color: #FFFFFF; }
+    .btn-default:focus {
+      background-color: #1786E2;
+      color: #FFFFFF; }
+  .btn-negative {
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 0px 0px #0C1E2B;
     border: 2px solid #0C1E2B;
-    background-color: #F1F1F1;
-    color: #0C1E2B; }
-
-.btn-cancel {
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 0 0 #EB5562;
-  border: 2px solid #EB5562;
-  color: #EB5562;
-  transition: none; }
-  .btn-cancel:active {
-    background-color: #F1F1F1; }
-  .btn-cancel:hover {
-    background-color: #F1F1F1;
+    color: #0C1E2B;
+    transition: none; }
+    .btn-negative:active {
+      background-color: #F1F1F1; }
+    .btn-negative:hover {
+      border: 2px solid #0C1E2B;
+      background-color: #F1F1F1;
+      color: #0C1E2B; }
+  .btn-cancel {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 0 0 #EB5562;
     border: 2px solid #EB5562;
-    color: #EB5562; }
-  .btn-cancel:focus {
-    color: #EB5562; }
-
-.btn-confirm {
-  background-color: #35bf5a;
-  color: #FFFFFF;
-  box-shadow: 0px 4px 0px 0px #545454; }
-  .btn-confirm:active {
+    color: #EB5562;
+    transition: none; }
+    .btn-cancel:active {
+      background-color: #F1F1F1; }
+    .btn-cancel:hover {
+      background-color: #F1F1F1;
+      border: 2px solid #EB5562;
+      color: #EB5562; }
+    .btn-cancel:focus {
+      color: #EB5562; }
+  .btn-confirm {
     background-color: #35bf5a;
-    color: #FFFFFF; }
-  .btn-confirm:hover {
-    background-color: #86cc36;
-    color: #FFFFFF; }
-  .btn-confirm:focus {
-    background-color: #35bf5a;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    box-shadow: 0px 4px 0px 0px #545454; }
+    .btn-confirm:active {
+      background-color: #35bf5a;
+      color: #FFFFFF; }
+    .btn-confirm:hover {
+      background-color: #86cc36;
+      color: #FFFFFF; }
+    .btn-confirm:focus {
+      background-color: #35bf5a;
+      color: #FFFFFF; }
+  .btn-third {
+    background-color: transparent;
+    color: #1786E2;
+    border-radius: 0;
+    margin: 0;
+    border: 0;
+    padding: 16px;
+    float: none;
+    box-shadow: none;
+    width: 100%;
+    display: block;
+    border-width: 0; }
+    .btn-third:active {
+      transform: translate(0, 0); }
+    .btn-third:hover {
+      color: #1786E2; }
+    .btn-third:focus {
+      color: #1786E2; }
+    @media (min-width: 768px) {
+      .btn-third {
+        width: 100%;
+        border: none; } }
+    @media (min-width: 992px) {
+      .btn-third {
+        border-left: 1px solid #1786E2;
+        width: 30%;
+        display: inline;
+        float: right; }
+        .udai-wrapper .btn-third {
+          margin: 18px 0; } }
 
 .botonera {
   margin: 24px auto; }
   @media (min-width: 768px) {
     .botonera .col-sm-6 {
-      float: right; } }
-
-.btn-third {
-  background-color: transparent;
-  color: #1786E2;
-  border-radius: 0;
-  margin: 8px 0 0 8px;
-  border: 0;
-  padding: 16px;
-  margin-left: 0;
-  float: none;
-  box-shadow: none;
-  width: 100%;
-  display: block;
-  border-width: 0; }
-  .btn-third:active {
-    transform: translate(0, 0); }
-  .btn-third:hover {
-    color: #1786E2; }
-  .btn-third:focus {
-    color: #1786E2; }
-  @media (min-width: 768px) {
-    .btn-third {
-      width: 100%;
-      border: none;
-      margin-top: 10px; } }
-  @media (min-width: 992px) {
-    .btn-third {
-      border-left: 1px solid #1786E2;
-      margin-top: 0px;
-      width: 40%;
-      display: inline;
       float: right; } }
 
 label {
@@ -159,28 +153,67 @@ label {
     color: #35bf5a; }
 
 .captcha-wrapper {
-  margin-top: 24px;
-  /*.btn-thrid {
-    width: 100%;
-    margin-top: 10px;
-    display: block;
-    border-width: 0;
-  }*/ }
+  margin-top: 24px; }
   .captcha-wrapper img {
     margin: 0 auto;
     display: block; }
   @media (min-width: 992px) {
-    .captcha-wrapper {
-      /*.btn-thrid {
-        margin: 0;
-        width: 40%;
-        display: inline;
-        border-left: 1px solid $blue-80;
-      }*/ }
-      .captcha-wrapper img {
-        width: 54%;
-        margin: 6px 6% 0 0;
-        display: inline; } }
+    .captcha-wrapper img {
+      width: 58%;
+      margin: 0 6%;
+      display: inline; } }
+
+.secondary-text p {
+  color: #1786E2;
+  font-weight: normal;
+  margin-top: 8px;
+  margin-bottom: 12px; }
+
+.option-box {
+  display: block;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  position: relative; }
+  .option-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+    .option-box input:checked ~ span {
+      background-color: #005296;
+      border: 0; }
+      .option-box input:checked ~ span:checked {
+        display: block; }
+  .option-box input[type='radio'] {
+    width: 0px; }
+  .option-box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #6C7F85;
+    margin-left: 5px; }
+    .option-box span::after {
+      content: "";
+      position: absolute;
+      display: none; }
+  .option-box .radio {
+    display: inline-block !important;
+    margin-top: 0; }
+    @media (min-width: 992px) {
+      .option-box .radio {
+        margin-right: 16px; } }
+    .option-box .radio span {
+      border-radius: 50%; }
+    .option-box .radio p {
+      display: inline-block;
+      margin-left: 38px;
+      color: #0C1E2B;
+      margin-top: 0 !important; }
+  .option-box .checkbox span {
+    border-radius: 4px; }
 
 .message-wrapper {
   margin: 24px auto; }
@@ -259,6 +292,43 @@ footer {
   display: inline-block;
   padding: 35px 0 25px; }
 
+.udai-wrapper {
+  margin: 24px auto; }
+  .udai-wrapper .panel .panel-body {
+    display: inline-block;
+    width: 70%; }
+    .udai-wrapper .panel .panel-body h4 {
+      margin: 0;
+      text-transform: uppercase; }
+  .udai-wrapper .panel a {
+    display: block; }
+    .udai-wrapper .panel a:hover {
+      background-color: #1786E2;
+      color: #FFFFFF; }
+      .udai-wrapper .panel a:hover p {
+        color: #FFFFFF; }
+      .udai-wrapper .panel a:hover button {
+        color: #FFFFFF; }
+        @media (min-width: 992px) {
+          .udai-wrapper .panel a:hover button {
+            border-color: #FFFFFF; } }
+    .udai-wrapper .panel a[selected] {
+      background-color: #1786E2; }
+      .udai-wrapper .panel a[selected] p, .udai-wrapper .panel a[selected] h4 {
+        color: #FFFFFF; }
+      .udai-wrapper .panel a[selected] button {
+        color: #FFFFFF; }
+        @media (min-width: 992px) {
+          .udai-wrapper .panel a[selected] button {
+            border-color: #FFFFFF; } }
+  .udai-wrapper .panel .mapa-wrapper {
+    padding: 20px; }
+    .udai-wrapper .panel .mapa-wrapper .mapa-body {
+      width: 100%; }
+      @media (min-width: 768px) {
+        .udai-wrapper .panel .mapa-wrapper .mapa-body {
+          height: auto; } }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: #f9f9f9; }
@@ -303,6 +373,12 @@ h5, h6 {
 
 img {
   max-width: 100%; }
+
+#menu {
+  border-bottom: 1px solid #6C7F85; }
+  #menu h2 {
+    font-weight: lighter;
+    color: #13597C; }
 
 .content {
   margin-top: 16px; }

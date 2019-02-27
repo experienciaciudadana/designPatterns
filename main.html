@@ -8,7 +8,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" href="../poncho/src/css/poncho.css">-->
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -29,10 +28,27 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-12">
+          <div id="menu">
+            <h2>Menu</h2>
+            <ul class="nav nav-pills">
+              <li role="presentation"><a href="#variables">Variables</a></li>
+              <li role="presentation"><a href="#cssjs">CSS y JS</a></li>
+              <li role="presentation"><a href="#header">Header</a></li>
+              <li role="presentation"><a href="#footer">Footer</a></li>
+              <li role="presentation"><a href="#botones">Botones</a></li>
+              <li role="presentation"><a href="#tipografias">Tipografías</a></li>
+              <li role="presentation"><a href="#inputs">Inputs</a></li>
+              <li role="presentation"><a href="#mensajes">Mensajes</a></li>
+              <li role="presentation"><a href="#mascaras">Máscaras</a></li>
+              <li role="presentation"><a href="#opciones">Selector de opciones</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12">
 
 <!-- Variables -->
           <div class="component">
-            <h2>Variables</h2>
+            <h2 id="variables">Variables</h2>
             <p>
               Todos los archivos toman las variables del archivo. Incluirlo en la misma ubicación que el archivo scss desde donde se implementarán los estilos.
             </p>
@@ -1008,12 +1024,12 @@
               </div>
             </div>
           </div>
-
+          <hr>
 <!-- Archivos CSS, JS, Boostrap y Poncho iniciales -->
           <div class="component">
-            <h2>CSS y JS</h2>
+            <h2 id="cssjs">CSS y JS</h2>
             <p>
-              Se utilizan los CDN de los archivos de bootstrap y el archivo descargado de Poncho como base de las hojas de estilo. <a href="https://github.com/argob/poncho">Descargar Poncho</a>
+              Se utilizan los CDN de los archivos de bootstrap.</a>
             </p>
 <pre>
 <code>
@@ -1023,7 +1039,6 @@
 
   &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;
   &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
-  &lt;link rel="stylesheet" href="../poncho/src/css/poncho.css"&gt;
 
 &lt;/head&gt;
 </code>
@@ -1038,10 +1053,10 @@
 </code>
 </pre>
           </div>
-
+          <hr>
 <!-- Top bar con Logo de Anses y nombre de aplicación -->
           <div class="component">
-            <h2>Header</h2>
+            <h2 id="header">Header</h2>
               <p>Se recomienda incluir un <i>header</i> común en todas las aplicaciones y servicios integrados a este sistema. El mismo debe incluir el logo de Anses y el nombre de la aplicación o servicio.<br><a href="img/logo.svg">Descargar logotipo Anses</a></p>
               <img src="img/header-bar.png" alt="Header">
             <div class="row codeblock">
@@ -1102,10 +1117,10 @@
               </div>
             </div>
           </div>
-
+          <hr>
 <!-- Footer -->
           <div class="component">
-            <h2>Footer</h2>
+            <h2 id="footer">Footer</h2>
               <p>Se recomienda incluir un <i>footer</i> común en todas las aplicaciones y servicios integrados a este sistema. El mismo debe incluir el escudo y la referencia a la presidencia de la Nación. Luego Anses. El año es generado automáticamente por un <i>script</i>.<br><a href="img/escudo.png">Descargar escudo Presidencia de la Nación</a></p>
               <img src="img/footer-bar.png" alt="Header">
             <div class="row codeblock">
@@ -1140,10 +1155,10 @@
               </div>
             </div>
           </div>
-
+          <hr>
 <!-- Componente con todos los botones, sus visualizaciones y su hoja de estilo -->
           <div class="component">
-            <h2>Botones</h2>
+            <h2 id="botones">Botones</h2>
             <h4>Tipos</h4>
             <div class="row">
               <div class="col-sm-12 col-md-6">
@@ -1219,92 +1234,132 @@
   		outline: none;
   	  -webkit-outline: none;
   	}
-  }
 
-  .btn-default {
-    background-color: $blue-60;
-    box-shadow: 0px 4px 0px 0px $blue-100;
-    color: $snow;
+  	&-default {
+  	  background-color: $blue-60;
+  	  box-shadow: 0px 4px 0px 0px $blue-100;
+  	  color: $snow;
 
-    &:active {
-      background-color: $blue-80;
-  		color: $snow;
+  	  &:active {
+  	    background-color: $blue-80;
+  			color: $snow;
+
+  			&:hover {
+  				background-color: $blue-80;
+  				color: $snow;
+  			}
+  	  }
+
+  	  &:hover {
+  	    background-color: $blue-80;
+  			color: $snow;
+  	  }
+
+  	  &:focus {
+  	    background-color: $blue-80;
+  	    color: $snow;
+  	  }
+  	}
+
+  	&-negative {
+  		background-color: $snow;
+  		box-shadow: 0px 2px 0px 0px $blue-100;
+  		border: 2px solid $blue-100;
+  		color: $blue-100;
+  	  transition: none;
+
+  	  &:active {
+  	    background-color: $gray-20;
+  		}
 
   		&:hover {
-  			background-color: $blue-80;
-  			color: $snow;
+  			border: 2px solid $blue-100;
+  			background-color: $gray-20;
+  			color: $blue-100;
   		}
-    }
-
-    &:hover {
-      background-color: $blue-80;
-  		color: $snow;
-    }
-
-    &:focus {
-      background-color: $blue-80;
-      color: $snow;
-    }
-  }
-
-  .btn-negative {
-  	background-color: $snow;
-  	box-shadow: 0px 2px 0px 0px $blue-100;
-  	border: 2px solid $blue-100;
-  	color: $blue-100;
-    transition: none;
-
-    &:active {
-      background-color: $gray-20;
   	}
 
-  	&:hover {
-  		border: 2px solid $blue-100;
-  		background-color: $gray-20;
-  		color: $blue-100;
-  	}
-  }
-
-  .btn-cancel {
-  	background-color: $snow;
-    box-shadow: 0 2px 0 0 $red;
-    border: 2px solid $red;
-  	color: $red;
-  	transition: none;
-
-  	&:active {
-      background-color: $gray-20;
-  	}
-
-  	&:hover {
-  		background-color: $gray-20;
+  	&-cancel {
+  		background-color: $snow;
+  	  box-shadow: 0 2px 0 0 $red;
   	  border: 2px solid $red;
   		color: $red;
+  		transition: none;
+
+  		&:active {
+  	    background-color: $gray-20;
+  		}
+
+  		&:hover {
+  			background-color: $gray-20;
+  		  border: 2px solid $red;
+  			color: $red;
+  		}
+
+  		&:focus {
+  	    color: $red;
+  	  }
   	}
 
-  	&:focus {
-      color: $red;
-    }
-  }
-
-  .btn-confirm {
-  	background-color: $green;
-  	color: $snow;
-  	box-shadow: 0px 4px 0px 0px $gray-80;
-
-  	&:active {
+  	&-confirm {
   		background-color: $green;
   		color: $snow;
+  		box-shadow: 0px 4px 0px 0px $gray-80;
+
+  		&:active {
+  			background-color: $green;
+  			color: $snow;
+  		}
+
+  		&:hover {
+  			background-color: $green-ligther;
+  			color: $snow;
+  		}
+
+  		&:focus {
+  			background-color: $green;
+  			color: $snow;
+  		}
   	}
 
-  	&:hover {
-  		background-color: $green-ligther;
-  		color: $snow;
-  	}
+  	&-third {
+  		background-color: transparent;
+  	  color: $blue-80;
+  	  border-radius: 0;
+  	  margin: 0;
+  	  border: 0;
+  	  padding: 16px;
+  	  float: none;
+  	  box-shadow: none;
+  		width: 100%;
+  		display: block;
+  		border-width: 0;
 
-  	&:focus {
-  		background-color: $green;
-  		color: $snow;
+  		&:active {
+  			transform: translate(0, 0);
+  		}
+  		&:hover {
+  			color: $blue-80;
+  		}
+  		&:focus {
+  			color: $blue-80;
+  		}
+
+  		@media (min-width: $screen-sm-min) {
+  			width: 100%;
+  			border: none;
+  		}
+
+  		@media (min-width: $screen-md-min) {
+  			border-left: 1px solid $blue-80;
+  			width: 30%;
+  			display: inline;
+  			float: right;
+
+  			.udai-wrapper & {
+  				margin: 18px 0;
+  			}
+  		}
   	}
   }
 
@@ -1318,49 +1373,10 @@
     }
   }
 
-  .btn-third {
-  	background-color: transparent;
-    color: $blue-80;
-    border-radius: 0;
-    margin: 8px 0 0 8px;
-    border: 0;
-    padding: 16px;
-    margin-left: 0;
-    float: none;
-    box-shadow: none;
-  	width: 100%;
-  	display: block;
-  	border-width: 0;
-
-  	&:active {
-  		transform: translate(0, 0);
-  	}
-  	&:hover {
-  		color: $blue-80;
-  	}
-  	&:focus {
-  		color: $blue-80;
-  	}
-
-  	@media (min-width: $screen-sm-min) {
-  		width: 100%;
-  		border: none;
-  		margin-top: 10px;
-  	}
-
-  	@media (min-width: $screen-md-min) {
-  		border-left: 1px solid $blue-80;
-  		margin-top: 0px;
-  		width: 40%;
-  		display: inline;
-  		float: right;
-  	}
-  }
 </code>
 </pre>
               </div>
             </div>
-
             <h4>Botonera ejemplo</h4>
             <div class="botonera">
               <div class="row">
@@ -1414,10 +1430,10 @@
             </div>
           </div>
 <!-- Fin de la visualización de los botones -->
-
+          <hr>
 <!-- Componente con todos los textos y títulos -->
           <div class="component">
-            <h2>Tipografías</h2>
+            <h2 id="tipografias">Tipografías</h2>
             <div class="row">
               <div class="col-sm-12">
                 <p>Los títulos utilizados son los propios de Boostrap con los colores correspondientes a Anses. La tipografía utilizada es la propia del sistema en donde se visualiza. (ej. Android = Roboto)</p>
@@ -1445,10 +1461,10 @@
             </div>
           </div>
 <!-- Fin de la visualización de los textos y títulos -->
-
+          <hr>
 <!-- Componente con los campos inputs de formularios -->
           <div class="component">
-            <h2>Inputs</h2>
+            <h2 id="inputs">Inputs</h2>
             <div class="row">
               <div class="col-sm-12">
                 <h4>Tipos</h4>
@@ -1482,7 +1498,6 @@
 </pre>
               </div>
             </div>
-
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
@@ -1511,7 +1526,6 @@
 </pre>
               </div>
             </div>
-
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
@@ -1546,7 +1560,6 @@
 </pre>
               </div>
             </div>
-
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="row">
@@ -1592,6 +1605,54 @@
 </pre>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="component">
+                  <h4>Radio Buttons</h4>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">Opciones</label>
+                        <div class="option-box">
+                          <label class="radio">
+                            <input type="radio" name="radio" required>
+                            <p>Opción 1</p>
+                            <span></span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="radio" required>
+                            <p>Opción 2</p>
+                            <span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+<pre>
+<code>
+  &lt;div class="form-group"&gt;
+    &lt;label for=""&gt;Opciones&lt;/label&gt;
+    &lt;div class="option-box"&gt;
+      &lt;label class="radio"&gt;
+        &lt;input type="radio" name="radio" required&gt;
+        &lt;p&gt;Opción 1&lt;/p&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class="radio"&gt;
+        &lt;input type="radio" name="radio" required&gt;
+        &lt;p&gt;Opción 2&lt;/p&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+              </div>
+            </div>
             <div class="row codeblock">
               <div class="col-sm-12">
                 <h5>SCSS</h5>
@@ -1608,11 +1669,6 @@
   .errorMsg {
       color: $red;
       margin-top: 8px;
-  }
-
-  .captcha-wrapper {
-    margin-top: 24px;
-
   }
 
   .input-group {
@@ -1669,6 +1725,102 @@
     }
   }
 
+  .captcha-wrapper {
+    margin-top: 24px;
+
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+
+    @media (min-width: $screen-md-min) {
+      img {
+        width: 58%;
+        margin: 0 6%;
+        display: inline;
+      }
+    }
+  }
+
+  .secondary-text {
+  	p {
+  		color: $blue-80;
+  		font-weight: normal;
+  		margin-top: 8px;
+  		margin-bottom: 12px;
+  	}
+  }
+
+
+  // Radio buttons and checks
+  .option-box {
+    display: block;
+    flex-flow: row;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: relative;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked {
+        ~ span {
+        background-color: $blue-60;
+        border: 0;
+
+        &:checked {
+          display: block;
+        }
+       }
+      }
+    }
+
+    input[type='radio'] {
+      width: 0px;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: 2px solid $gray-60;
+      margin-left: 5px;
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+
+    .radio {
+      display: inline-block !important;
+      margin-top: 0;
+      @media (min-width: $screen-md-min) {
+        margin-right: 16px;
+      }
+      span {
+        border-radius: 50%;
+      }
+      p {
+        display: inline-block;
+        margin-left: 38px;
+        color: $blue-100;
+        margin-top: 0 !important;
+      }
+    }
+
+    .checkbox {
+      span {
+        border-radius: 4px;
+      }
+    }
+  }
+
 </code>
 </pre>
               </div>
@@ -1703,6 +1855,21 @@
                             <input type="text" class="form-control" placeholder="">
                             <!-- debe colocarse la clase fa-check o fa-times para respuesta positiva o negativa en la etiqueta i -->
                             <span class="input-group-addon"><i class="fa"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="">Opciones</label>
+                          <div class="option-box">
+                            <label class="radio">
+                              <input type="radio" name="radio" required>
+                              <p>Opción 1</p>
+                              <span></span>
+                            </label>
+                            <label class="radio">
+                              <input type="radio" name="radio" required>
+                              <p>Opción 2</p>
+                              <span></span>
+                            </label>
                           </div>
                         </div>
                         <div class="row">
@@ -1745,54 +1912,74 @@
 <pre>
 <code>
 &lt;div class="row"&gt;
-  &lt;div class="col-sm-offset-2 col-sm-8"&gt;
-    &lt;h2&gt;Datos del titular&lt;/h2&gt;
-    &lt;div class="panel panel-default"&gt;
-      &lt;div class="panel-body"&gt;
-        &lt;div class="form-group"&gt;
-          &lt;label for=""&gt;Nombre del titular&lt;/label&gt;
-        &lt;!-- el input inicial no debe tener ni clase error ni clase success --&gt;
-          &lt;div class="input-group"&gt;
-            &lt;input type="text" class="form-control" placeholder=""&gt;
-            &lt;!-- debe colocarse la clase fa-check o fa-times para respuesta positiva o negativa en la etiqueta i --&gt;
-            &lt;span class="input-group-addon"&gt;&lt;i class="fa"&gt;&lt;/i&gt;&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="form-group"&gt;
-          &lt;label for="">Nombre del apoderado (opcional)&lt;/label&gt;
-          &lt;!-- el input inicial no debe tener ni clase error ni clase success --&gt;
-          &lt;div class="input-group"&gt;
-            &lt;input type="text" class="form-control" placeholder=""&gt;
-            &lt;!-- debe colocarse la clase fa-check o fa-times para respuesta positiva o negativa en la etiqueta i --&gt;
-            &lt;span class="input-group-addon"&gt;&lt;i class="fa"&gt;&lt;/i&gt;&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="row"&gt;
-          &lt;div class="col-sm-6"&gt;
+  &lt;div class="col-sm-12"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-offset-2 col-sm-8"&gt;
+        &lt;h2&gt;Datos del titular&lt;/h2&gt;
+        &lt;div class="panel panel-default"&gt;
+          &lt;div class="panel-body"&gt;
             &lt;div class="form-group"&gt;
-              &lt;label for=""&gt;Código de seguridad&lt;/label&gt;
+              &lt;label for=""&gt;Nombre del titular&lt;/label&gt;
+              &lt;!-- el input inicial no debe tener ni clase error ni clase success --&gt;
               &lt;div class="input-group"&gt;
                 &lt;input type="text" class="form-control" placeholder=""&gt;
+                &lt;!-- debe colocarse la clase fa-check o fa-times para respuesta positiva o negativa en la etiqueta i --&gt;
                 &lt;span class="input-group-addon"&gt;&lt;i class="fa"&gt;&lt;/i&gt;&lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="col-sm-6"&gt;
-            &lt;div class="captcha-wrapper"&gt;
-              &lt;img class="" src="img/captcha.gif" alt=""&gt;
-              &lt;button type="button" class="btn btn-third" name="button">recargar&lt;/button&gt;
+            &lt;div class="form-group"&gt;
+              &lt;label for=""&gt;Nombre del apoderado (opcional)&lt;/label&gt;
+              &lt;!-- el input inicial no debe tener ni clase error ni clase success --&gt;
+              &lt;div class="input-group"&gt;
+                &lt;input type="text" class="form-control" placeholder=""&gt;
+                &lt;!-- debe colocarse la clase fa-check o fa-times para respuesta positiva o negativa en la etiqueta i --&gt;
+                &lt;span class="input-group-addon"&gt;&lt;i class="fa"&gt;&lt;/i&gt;&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+              &lt;label for=""&gt;Opciones&lt;/label&gt;
+              &lt;div class="option-box"&gt;
+                &lt;label class="radio"&gt;
+                  &lt;input type="radio" name="radio" required&gt;
+                  &lt;p&gt;Opción 1&lt;/p&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class="radio"&gt;
+                  &lt;input type="radio" name="radio" required&gt;
+                  &lt;p&gt;Opción 2&lt;/p&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-6"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for=""&gt;Código de seguridad&lt;/label&gt;
+                  &lt;div class="input-group"&gt;
+                    &lt;input type="text" class="form-control" placeholder=""&gt;
+                    &lt;span class="input-group-addon"&gt;&lt;i class="fa"&gt;&lt;/i&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-6"&gt;
+                &lt;div class="captcha-wrapper"&gt;
+                  &lt;img class="" src="img/captcha.gif" alt=""&gt;
+                  &lt;button type="button" class="btn btn-third" name="button"&gt;recargar&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="botonera"&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-sm-6"&gt;
-          &lt;button class="btn btn-default" type="button" name="button"&gt;Continuar&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class="col-sm-6"&gt;
-          &lt;button class="btn btn-negative" type="button" name="button"&gt;Anterior&lt;/button&gt;
+        &lt;!-- incluir componente botonera acá --&gt;
+        &lt;div class="botonera"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-sm-6"&gt;
+              &lt;button class="btn btn-default" type="button" name="button"&gt;Continuar&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="col-sm-6"&gt;
+              &lt;button class="btn btn-negative" type="button" name="button"&gt;Anterior&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1804,10 +1991,10 @@
             </div>
           </div>
 <!-- Fin de la visualización de los campos inputs de formularios -->
-
+          <hr>
 <!-- Componente ítems mensajes -->
           <div class="component">
-            <h2>Mensajes</h2>
+            <h2 id="mensajes">Mensajes</h2>
             <h4>Tipos</h4>
 
             <!-- Mensaje de Confirmación -->
@@ -1979,10 +2166,10 @@
             </div>
           </div>
 <!-- Fin de la visualización de mensajes -->
-
+          <hr>
 <!-- Máscaras -->
           <div class="component">
-            <h2>Máscaras</h2>
+            <h2 id="mascaras">Máscaras</h2>
             <p>
               La máscara de los campos <i>input</i> es un <i>script</i> que permite cualquier configuración de ingreso de números.
             </p>
@@ -2033,6 +2220,7 @@
 </pre>
               </div>
             </div>
+            <hr>
             <!-- Máscara para fechas -->
             <div class="row">
               <div class="col-sm-12 col-md-6">
@@ -2107,6 +2295,184 @@
               </div>
             </div>
           </div>
+<!-- Selector de opciones -->
+          <div class="container">
+            <h2 id="opciones">Selector de opciones</h2>
+            <p>Para listar, por ejemplo, las oficinas utilizamos opciones clickeables que, a su vez, tienen un link para desplegar más información (en el caso de las oficinas se despliega un mapa de la ubicación).</p>
+            <h4>Tipos</h4>
+            <div class="row">
+              <div class="col-sm-offset-2 col-sm-8">
+                <!-- OPCION COMÚN -->
+                <div class="udai-wrapper">
+                  <div class="panel panel-default">
+                    <a href="#"> <!-- En este link se debe agregar la funcionalidad para seleccionar la opción -->
+                      <div class="panel-body">
+                        <h4>OPCIÓN SIN LINK SECUNDARIO</h4>
+                        <p class="text-muted">Información secundaria</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+<pre>
+<code>
+  &lt;div class="udai-wrapper"&gt;
+    &lt;div class="panel panel-default"&gt;
+      &lt;a href="#"&gt; &lt;!-- En este link se debe agregar la funcionalidad para seleccionar la opción --&gt;
+        &lt;div class="panel-body"&gt;
+          &lt;h4&gt;OPCIÓN&lt;/h4&gt;
+          &lt;p class="text-muted"&gt;Información secundaria&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+                <!-- OPCION SELECCIONADA -->
+                <div class="udai-wrapper">
+                  <div class="panel panel-default">
+                    <a href="#" selected> <!-- En este link se debe agregar la funcionalidad para seleccionar la opción -->
+                      <div class="panel-body">
+                        <h4>OPCIÓN SELECCIONADA</h4>
+                        <p class="text-muted">Información secundaria</p>
+                      </div>
+                      <button class="btn btn-third" type="button" name="button">Link para desplegar</button> <!-- En este link se debe agregar la funcionalidad para desplegar la información adicional -->
+                    </a>
+                  </div>
+                </div>
+<pre>
+<code>
+  &lt;div class="udai-wrapper"&gt;
+    &lt;div class="panel panel-default"&gt;
+      &lt;a href="#"&gt; &lt;!-- En este link se debe agregar la funcionalidad para seleccionar la opción --&gt;
+        &lt;div class="panel-body"&gt;
+          &lt;h4&gt;OPCIÓN SELECCIONADA&lt;/h4&gt;
+          &lt;p class="text-muted"&gt;Información secundaria&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-third" type="button" name="button"&gt;Link para desplegar&lt;/button&gt; &lt;!-- En este link se debe agregar la funcionalidad para desplegar la información adicional --&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+                <!-- OPCION DESPLEGADA -->
+                <div class="udai-wrapper">
+                  <div class="panel panel-default">
+                    <a href="#"> <!-- En este link se debe agregar la funcionalidad para seleccionar la opción -->
+                      <div class="panel-body">
+                        <h4>OPCION DESPLEGADA</h4>
+                        <p class="text-muted">Información secundaria</p>
+                      </div>
+                      <button class="btn btn-third" type="button" name="button">Link para desplegar</button> <!-- En este link se debe agregar la funcionalidad para desplegar la información adicional -->
+                    </a>
+                    <div class="mapa-wrapper">
+                      <div class="mapa-body">
+                        <!-- Reemplazar imagen de mapa -->
+                        <img src="img/map.png" alt="Imagen de Mapa">
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-offset-3 col-sm-6">
+                          <button class="btn btn-default" type="button" name="button">Seleccionar</button> <!-- En este link se debe agregar nuevamente la funcionalidad para seleccionar la opción -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<pre>
+<code>
+&lt;div class="udai-wrapper"&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;a href="#"&gt; &lt;!-- En este link se debe agregar la funcionalidad para seleccionar la opción --&gt;
+      &lt;div class="panel-body"&gt;
+        &lt;h4&gt;OPCION DESPLEGADA&lt;/h4&gt;
+        &lt;p class="text-muted"&gt;Información secundaria&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;button class="btn btn-third" type="button" name="button"&gt;Link para desplegar&lt;/button&gt; &lt;!-- En este link se debe agregar la funcionalidad para desplegar la información adicional --&gt;
+    &lt;/a&gt;
+    &lt;div class="mapa-wrapper"&gt;
+      &lt;div class="mapa-body"&gt;
+        &lt;!-- Reemplazar imagen de mapa --&gt;
+        &lt;img src="img/map.png" alt="Imagen de Mapa"&gt;
+      &lt;/div&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-offset-3 col-sm-6"&gt;
+          &lt;button class="btn btn-default" type="button" name="button"&gt;Seleccionar&lt;/button&gt; &lt;!-- En este link se debe agregar nuevamente la funcionalidad para seleccionar la opción --&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+              </div>
+            </div>
+            <div class="row codeblock">
+              <div class="col-sm-12">
+                <h5>SCSS</h5>
+<pre>
+<code>
+  .udai-wrapper {
+    margin: 24px auto;
+
+    .panel {
+
+      .panel-body {
+        display: inline-block;
+        width: 70%;
+
+        h4 {
+          margin: 0;
+          text-transform: uppercase;
+        }
+      }
+      a {
+        display: block;
+
+        &:hover {
+          background-color: $blue-80;
+          color: $snow;
+          p {
+            color: $snow;
+          }
+          button {
+            color: $snow;
+            @media (min-width: $screen-md-min) {
+        			border-color: $snow;
+            }
+          }
+        }
+
+        &[selected]{
+          background-color: $blue-80;
+          p, h4 {
+            color: $snow;
+          }
+          button {
+            color: $snow;
+            @media (min-width: $screen-md-min) {
+        			border-color: $snow;
+            }
+          }
+        }
+      }
+      .mapa-wrapper {
+        padding: 20px;
+
+        .mapa-body {
+          width: 100%;
+          @media (min-width: $screen-sm-min) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+</code>
+</pre>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2126,8 +2492,9 @@
     integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+  <!-- Personalized scripts -->
+  <script src="js/mask.js" type="text/javascript"></script>
 
-<script src="js/mask.js" type="text/javascript"></script>
 </body>
 </html>

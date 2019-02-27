@@ -1,0 +1,56 @@
+.udai-wrapper {
+  margin: 24px auto;
+
+  .panel {
+
+    .panel-body {
+      display: inline-block;
+      width: 70%;
+
+      h4 {
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+    a {
+      display: block;
+
+      &:hover {
+        background-color: $blue-80;
+        color: $snow;
+        p {
+          color: $snow;
+        }
+        button {
+          color: $snow;
+          @media (min-width: $screen-md-min) {
+      			border-color: $snow;
+          }
+        }
+      }
+
+      &[selected]{
+        background-color: $blue-80;
+        p, h4 {
+          color: $snow;
+        }
+        button {
+          color: $snow;
+          @media (min-width: $screen-md-min) {
+      			border-color: $snow;
+          }
+        }
+      }
+    }
+    .mapa-wrapper {
+      padding: 20px;
+
+      .mapa-body {
+        width: 100%;
+        @media (min-width: $screen-sm-min) {
+          height: auto;
+        }
+      }
+    }
+  }
+}
